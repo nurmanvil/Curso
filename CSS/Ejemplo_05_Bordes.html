@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bordes</title>
+    <style>
+        p{
+            width: 25%;
+            height: 30px;
+            background-color: blue;
+            color: white;
+            border: 3px solid red;
+        }
+        p:first-child{
+            border-width: 5px;
+        }
+        p:nth-child(2) {
+            border-color: aqua;
+            border-style: dotted;
+            border-style: dashed;
+            border-style: double;
+        }
+        p:last-child {
+            border-style: groove;
+            border-style: ridge;
+        }
+    </style>
+</head>
+<body>
+    <p>Párrafo 1</p>
+    <p>Párrafo 2</p>
+    <p>Párrafo 3</p>
+    <p>Párrafo 4</p>
+</body>
+</html>

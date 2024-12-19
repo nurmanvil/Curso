@@ -1,0 +1,230 @@
+<!--Tarea Opcional 29/11/24-->
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Base de datos relacional - Wikipedia</title>
+</head>
+
+<body>
+    <!--Logo Wikipedia-->
+    <img src="imagenes/wikipedia.png" alt="logo" width="250">
+    <br><br>
+
+    <!--Buscador-->
+    <form action="#" method="get">
+        <label for="buscador"></label>
+        <input type="text" name="buscador" id="buscador" placeholder="Buscar en Wikipedia">
+        <label for="buscar"></label>
+        <input type="submit" value="Buscar">
+    </form>
+    <br><br>
+    <!--Contenidos: primer menú desplegable-->
+    <details>
+        <summary> <strong>Contenidos</strong></summary>
+        <strong>Inicio</strong> <br>
+        <span>Características comunes</span><br>
+        <!--Elementos: segundo menú desplegable-->
+        <details>
+            <summary>Elementos</summary>
+            <ul style="list-style: none;">
+                <li>Relaciones (características en común)
+                    <ul style="list-style: none;">
+                        <li>Relaciones base</li>
+                        <li>Relaciones derivadas</li>
+                    </ul>
+                </li>
+                <li>Dominios</li>
+                <li> Clasificación de Claves
+                    <ul style="list-style: none;">
+                        <li>Clave primaria</li>
+                        <li>Clave externa o foránea</li>
+                        <li>Clave índice</li>
+                    </ul>
+                </li>
+                <li>Procedimientos almacenados</li>
+            </ul>
+        </details>
+    </details>
+
+    <!--Título de la página-->
+    <h2>Base de datos relacional</h2>
+    <hr>
+
+    <!--Primer párrafo-->
+    <p>
+        La <strong>base de datos relacional</strong>
+        (BDR) es un tipo de
+        <!--Primer enlace-->
+        <a href="https://es.wikipedia.org/wiki/Base_de_datos">base de datos</a>
+        (BD) que cumple con el
+        <!--Segundo enlace-->
+        <a href="https://es.wikipedia.org/wiki/Modelo_relacional">modelo relacional</a>
+        (el modelo más utilizado actualmente para implementar las BD ya planificadas). Tras ser postuladas sus bases en
+        1970 por Edgar
+        Frank Codd,<sup>1</sup> de los laboratorios IBM en
+        <!--Tercer enlace-->
+        <a href="https://es.wikipedia.org/wiki/San_Jos%C3%A9_(California)">San José (California),</a>
+        no tardó en consolidarse como un nuevo paradigma en los modelos de base de datos.<sup>2</sup>
+    </p>
+    <!--Segundo párrafo-->
+    <p>
+        Un sistema de software utilizado para mantener las bases de datos relacionales es un relational database
+        management system (RDBMS) o sistema de gestión de bases de datos relacionales. Virtualmente, todos los sistemas
+        de bases de datos relacionales utilizan SQL (Structured Query Language) para consultar y mantener la base de
+        datos.
+    </p>
+
+    <!--Segundo apartado: Características comunes-->
+    <h3>Características comunes</h3>
+    <hr>
+    <!--Lista desordenada-->
+    <ul>
+        <li>Una base de datos se compone de varias tablas, denominadas relaciones.</li>
+        <li>No pueden existir dos tablas con el mismo nombre ni registro.</li>
+        <li>Cada tabla es a su vez un conjunto de campos (columnas) y registros (filas).</li>
+        <li>La relación entre una tabla padre y un hijo se lleva a cabo por medio de las llaves primarias y llaves
+            foráneas (o ajenas).</li>
+        <li>Las llaves primarias son la clave principal de un registro dentro de una tabla y estas deben cumplir con la
+            integridad de datos.</li>
+        <li>Las llaves ajenas se colocan en la tabla hija, contienen el mismo valor que la llave primaria del registro
+            padre; por medio de estas se hacen las formas relacionales.</li>
+    </ul>
+
+    <!--Tercer apartado: Elementos-->
+    <h3>Elementos</h3>
+    <hr>
+    
+    <!------------------TEXTO OPCIONAL------------------>
+    <!--Relaciones (características en común)-->
+    <h3>Relaciones (características en común)</h3>
+    <p>En una BDR, todos los datos se almacenan y se accede a ellos por medio de relaciones previamente establecidas.
+    </p>
+    <!--Relaciones base-->
+    <h4>Relaciones base</h4>
+    <p>Las relaciones que almacenan datos son llamadas relaciones base y su implementación es llamada "tabla". </p>
+    <!--Relaciones derivadas-->
+    <h4>Relaciones derivadas</h4>
+    <p>Otras relaciones no almacenan datos, pero son calculadas al aplicar operaciones relacionales. Estas relaciones
+        son llamadas relaciones derivadas y su implementación es llamada "vista" o "consulta". Las relaciones derivadas
+        son convenientes, ya que expresan información de varias relaciones actuando como si fuera una sola tabla. </p>
+    <p>Algunas no son determinadas por los usuarios, sino que son inherentemente definidas por el simple hecho de que la
+        BD sea relacional. Algunas otras restricciones las puede definir el usuario, por ejemplo, usar un campo con
+        valores enteros entre 1 y 10. </p>
+    <p>Las restricciones proveen un método de implementar "reglas" en la base de datos. </p>
+    <p>Las restricciones limitan los datos que pueden ser almacenados en las tablas. </p>
+    <p>Usualmente se definen usando expresiones que dan como resultado un valor booleano, indicando si los datos
+        satisfacen la restricción o no. </p>
+    <p>Las restricciones no son parte informal y formal del modelo relacional, pero son incluidas porque juegan el rol
+        de organizar mejor los datos. Las restricciones son muy discutidas junto con los conceptos relacionales. </p>
+
+    <!--Dominios-->
+    <h3>Dominios</h3>
+    <p>Un dominio describe un conjunto de posibles valores para cierto atributo. Como un dominio restringe los valores
+        del atributo, puede ser considerado como una restricción. Matemáticamente, atribuir un dominio a un atributo
+        significa "cualquier valor de este atributo debe ser elemento del conjunto especificado". </p>
+    <p>Distintos tipos de dominios son: enteros, cadenas de texto, fecha, no procedurales, etc. </p>
+    <p>Cada tabla puede tener uno o más campos cuyos valores identifican de forma única cada registro de dicha tabla, es
+        decir, no pueden existir dos o más registros diferentes cuyos valores en dichos campos sean idénticos. Este
+        conjunto de campos se llama clave única. Pueden existir varias claves únicas en una determinada tabla, y a cada
+        una de estas suele llamársele candidata a clave primaria.</p>
+
+    <!--Clasificación de Claves-->
+    <h3>Clasificación de Claves</h3>
+    <!--Clave primaria-->
+    <h4>Clave primaria</h4>
+    <p>Una clave primaria es una clave única (puede estar conformada por uno o más campos de la tabla) elegida entre
+        todas las candidatas que define unívocamente a todos los demás atributos de la tabla para especificar los datos
+        que serán relacionados con las demás tablas. La forma de hacer esto (relación entre tablas) es por medio de
+        claves foráneas. </p>
+    <!--Clave externa o foránea-->
+    <h4>Clave externa o foránea</h4>
+    <p>Una clave foránea es una referencia a una clave en otra tabla, determina la relación existente en dos tablas. Las
+        claves foráneas no necesitan ser claves únicas en la tabla donde están y sí a donde están referenciadas. </p>
+    <p>Por ejemplo, el código de departamento puede ser una clave foránea en la tabla de empleados. Se permite que haya
+        varios empleados en un mismo departamento, pero habrá uno y solo un departamento por cada clave distinta de
+        departamento en la tabla de departamentos. </p>
+    <!--Clave índice-->
+    <h4>Clave índice</h4>
+    <p>Las claves índice surgen con la necesidad de tener un acceso más rápido a los datos. Los índices pueden ser
+        creados con cualquier combinación de campos de una tabla. Las consultas que filtran registros por medio de estos
+        campos, pueden encontrar los registros de forma no secuencial usando la clave índice. </p>
+    <p>Las bases de datos relacionales incluyen múltiples técnicas de ordenamiento, cada una de ellas es óptima para
+        cierta distribución de datos y tamaño de la relación. </p>
+    <p>Los índices generalmente no se consideran parte de la base de datos, pues son un detalle agregado. Sin embargo,
+        las claves índices son desarrolladas por el mismo grupo de programadores que las otras partes de la base de
+        datos. </p>
+
+    <!--Procedimientos almacenados-->
+    <h3>Procedimientos almacenados</h3>
+    <p>Un procedimiento almacenado es código ejecutable que se asocia y se almacena con la base de datos. Los
+        procedimientos almacenados usualmente recogen y personalizan operaciones comunes, como insertar un registro
+        dentro de una tabla, recopilar información estadística, o encapsular cálculos complejos. Son frecuentemente
+        usados por un API por seguridad o simplicidad. </p>
+    <p>Los procedimientos almacenados no son parte del modelo relacional, pero todas las implementaciones comerciales
+        los incluyen. </p>
+    <br>
+
+    <!--Cuarto apartado: Estructura y definiciones-->
+    <h3>Estructura y definiciones</h3>
+    <hr><br>
+    <!------------------TEXTO OPCIONAL------------------>
+
+    <!--Tabla 5*3-->
+    <table border="1">
+        <tr>
+            <th>Término SQL</th>
+            <th>Término de bases de datos relacionales</th>
+            <th>Descripción </th>
+        </tr>
+        <tr>
+            <td><em>Fila</em></td>
+            <td>Tupla o registro</td>
+            <td>Un conjunto de datos, que representa un ítem simple </td>
+        </tr>
+        <tr>
+            <!--Colspan-->
+            <td colspan="2"><em>Columna</em></td>
+            <td>Un elemento etiquetado de una tupla, p.e. "Dirección" o "Fecha de nacimiento" </td>
+        </tr>
+        <tr>
+            <td><em>Tabla</em></td>
+            <td>Relación o Base relvar</td>
+            <!--Rowspan-->
+            <td rowspan="2">Un conjunto de tuplas compartiendo los mismos atributos; un conjunto de filas y columnas.
+            </td>
+        </tr>
+        <tr>
+            <td><em>Vista o conjunto de resultados</em></td>
+            <td>Relvar derivado</td>
+        </tr>
+    </table>
+    <br>
+
+    <!--Formulario tipo post para crear una cuenta-->
+    <h3>Crear una cuenta</h3>
+    <hr>
+    <form action="#" method="post">
+        <label for="usuario">
+            <strong>Usuario</strong></label><br>
+        <input type="text" name="usuario" id="usuario" placeholder="Escribe tu nombre de usuario">
+
+        <br><br>
+        <label for="contraseña"><strong>Contraseña</strong></label><br>
+        <input type="password" name="contraseña" id="contraseña" placeholder="Escribe una contraseña">
+
+        <br><br>
+        <label for="confirma"><strong>Confirma la contraseña</strong></label><br>
+        <input type="text" name="confirma" id="confirma" placeholder="Introduce de nuevo la contraseña">
+
+        <br><br>
+        <label for="correo"><strong>Dirección de correo electrónico (recomendado)</strong></label><br>
+        <input type="text" name="correo" id="correo" placeholder="Escribe tu dirección de correo electrónico"><br><br>
+
+        <input type="submit" value="Crea tu cuenta">
+    </form>
+</body>
+
+</html>

@@ -1,0 +1,61 @@
+<!--Ejemplo_08_formulario.html-->
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form action="grabaform.php" method="get">
+        <label for="modelo"> Modelo móvil</label><br>
+        <input type="text" name="modelo" id="modelo">
+        <br>
+        <label for="comentarios">Comentarios</label>
+        <hr>
+        <textarea name="comentarios" id="comentarios" cols="30" rows="10"></textarea>
+        <input type="submit" value="Enviar">
+
+        <p>Sexo:</p>
+        <input type="radio" name="sexo" id="mujer" value="mujer">
+        <label for="mujer">Mujer</label>
+        <br>
+        <input type="radio" name="sexo" id="hombre" value="hombre" checked>
+        <label for="hombre">Hombre</label>
+        <br>
+        <input type="radio" name="sexo" id="indeterminado">
+        <label for="">Indeterminado</label>
+        <br>
+        <br>
+        <fieldset>
+            <legend>Selector de Cursos</legend>
+            <p>Cursos:</p>
+            <input type="checkbox" name="cursos[]" id="html" value="html">
+            <label for="html">HTML</label>
+            <br>
+            <input type="checkbox" name="cursos[]" id="css" value="css">
+            <label for="css">CSS</label>
+            <br>
+            <input type="checkbox" name="cursos[]" id="js" value="js">
+            <label for="js">JS</label>
+        </fieldset>
+        <br>
+        <hr>
+        <p>Elige ciudad</p>
+        <select name="" id="">
+            <option disabled selected="">Elige ciudad</option>
+            <optgroup label="Andalucía">
+
+            </optgroup>
+            <option value="sevilla">Sevilla</option>
+            <option value="doshermanas">Dos Hermanas</option>
+            <option value="madrid">Madrid</option>
+
+        </select>
+
+    </form>
+</body>
+
+</html>

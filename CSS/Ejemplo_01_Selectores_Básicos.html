@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* Selector Universal */
+        * {
+            font-size: 12px;
+            font-family: Arial;
+        }
+
+        /* Selector Base */
+        span {
+            background-color: aquamarine;
+        }
+        /* Selector Descendente */
+        p a {
+            color: green;
+        }
+        p span a {
+            color: red;
+        }
+        /* Selector Hijo */
+        p>a{
+            font-weight: bold;
+        }
+        /* Selector Adyacente */
+        p>span+a{
+            border: 2px solid blue;
+        }
+    </style>
+</head>
+
+<body>
+    <p>Párrafo 1</p>
+    <p>Párrafo 2</p>
+    <p>Párrafo 3
+        <a href="#">enlace</a> <!--Hijo de p-->
+    </p>
+    <p>Párrafo 4
+        <span>con <!--Hijo de p-->
+            <a href="#">enlace</a> <!--Nieto de p-->
+        </span>
+    </p>
+    <p>Párrafo 5
+        <span>con</span> <!--Hijo de p-->
+        <a href="#">enlace</a> <!--Hijo de p-->
+    </p> <!--a y span son hermanos-->
+
+    <!--Todos los a son descendientes de p-->
+</body>
+
+</html>

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formularios</title>
+    <!--Vamos a añadir fontawesome-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css"
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+            </style>
+    <style>
+        body {
+            font-family: "Open Sans",Roboto;
+            margin: 20px;
+            padding: 10px;
+            font-size: 14px;
+            font-weight: 350;
+        }
+
+        form {
+            width: 100%;
+            height: 500px;
+            box-shadow: 5px 5px 10px grey;
+            padding: 10px;
+        }
+
+        fieldset {
+            width: 90%;
+            float: left;
+            margin-bottom: 10px;
+        }
+
+        input[type="text"],
+        input[type="password"] {
+            border-radius: 8px 8px;
+            border: 1px solid #666
+        }
+
+        form input {}
+    </style>
+</head>
+
+<body>
+    <form action="#" method="post">
+        <section aria-label="info">
+        <fieldset>
+            <legend>Información personal</legend>
+            <label for="nombre">Nombre</label>
+            <input type="text" name="nombre" id="nombre"><br><br>
+            <label for="apellidos">Apellidos (opcional)</label>
+            <input type="text" name="apellidos" id="apellidos">
+        </fieldset>
+    </section>
+    <section aria-label="nacimiento">
+        <fieldset>
+            <legend>Fecha de nacimiento</legend>
+            <input type="date" name="nacimiento" id="nacimiento"><br>
+        </fieldset><br>
+    </section>
+    <section aria-label="genero">
+        <fieldset>
+            <legend>Género</legend>
+            <select name="genero" id="genero">
+                <option value="mujer">Mujer</option>
+                <option value="hombre">Hombre</option>
+                <option value="noquiero">Prefiero no decirlo</option>
+            </select>
+        </fieldset>
+    </section>
+        <br>
+        <section aria-label="opciones">
+        <fieldset>
+            <legend>Opciones</legend>
+            <i class="fa-bounce fa-solid fa-m"></i>
+            <label for="crear">Crear dirección Gmail</label>
+            <input type="radio" name="direccion" id="crear">
+            <hr>
+            <i class="fa-regular fa-envelope"></i>
+            <label for="usar">Usar tu correo</label>
+            <input type="radio" name="direccion" id="usar">
+        </fieldset>
+    </section>
+        <br>
+        <section aria-label="usuario">
+        <fieldset>
+            <label for="usuario">Usuario</label>
+            <input type="text" name="usuario" id="usuario"><br><br>
+
+            <label for="clave">Contraseña</label>
+            <input type="password" name="clave" id="clave"><br><br>
+
+            <label for="clave2">Repetir contraseña</label>
+            <input type="password" name="clave2" id="clave2"><br>
+        </fieldset>
+    </section>
+    <br>
+        <input type="submit" value="Crear cuenta">
+    </form>
+</body>
+
+</html>

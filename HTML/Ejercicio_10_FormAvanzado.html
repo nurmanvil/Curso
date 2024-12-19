@@ -1,0 +1,36 @@
+<!--Ejemplo_10_FormAvanzado.html-->
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario Avanzado</title>
+</head>
+
+<body>
+    <form action="#" method="post">
+        <!--Input tipo email-->
+        <label for="correo">Correo:</label><br>
+        <input type="email" name="correo" id="correo" required="required" placeholder="Escribe correo"><br><br>
+        <!--Input tipo search-->
+        <label for="buscar">Búsqueda:</label><br>
+        <input type="search" name="buscar" id="buscar"><br><br>
+        <!--Input tipo number-->
+        <label for="num">Números:</label><br>
+        <input type="number" name="num" id="num" min="1" max="10" step="2"><br><br>
+        <!--Input tipo range-->
+        <label for="rango">Rango:</label><br>
+        <input type="range" name="rango" id="rango">
+        <hr>
+        <!--Input tipo range-->
+        <label for="color">Color:</label><br>
+        <input type="color" name="color" id="color"><br><br>
+        <label for="fecha">Fecha:</label><br>
+        <input type="date" name="fecha" id="fecha">
+        <hr>
+        <button type="submit">Enviar formulario</button>
+    </form>
+</body>
+
+</html>
