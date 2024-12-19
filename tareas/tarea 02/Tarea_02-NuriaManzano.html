@@ -1,0 +1,441 @@
+<!--Tarea_02.html-->
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>El Corte Inglés</title>
+    <style>
+        /* Formateado de la página */
+        body {
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Cabecera de la página */
+        header {
+            position: fixed;
+            width: 100%;
+            background-color: white;
+            z-index: 1000;
+            padding-top: 0px;
+            border: 1px solid blue;
+        }
+
+        /* Banner descarga app */
+        header p {
+            border: 1px solid violet;
+            font-size: 14px;
+            text-align: center;
+            background-color: lightgray;
+            padding: 15px;
+            box-sizing: border-box;
+            position: relative;
+        }
+
+        /* El Corte Inglés */
+        header section:first-of-type {
+            float: left;
+            border: 1px solid red;
+            position: relative;
+            bottom: 10px;
+        }
+
+        img[alt="Menú"] {
+
+            position: relative;
+            bottom: 8px;
+            right: 5px;
+        }
+
+        /* Formulario */
+        header form {
+            position: absolute;
+            text-align: center;
+            width: 100%;
+            border: 1px solid aqua;
+        }
+
+        input:first-of-type {
+            width: 300px;
+            height: 30px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+        }
+        input:last-of-type {
+            width: 40px;
+            height: 40px;
+            background: url(imagenes/lupa3.png) no-repeat center center;
+            background-size: 30px 30px;
+            padding: 0;
+            cursor: pointer;
+            border: 0;
+            padding: 0 10px;
+        }
+
+        /* Iconos */
+        header table {
+            border: 1px solid pink;
+            position: absolute;
+            left: 88%;
+            top: 77px;
+            align-items: center;
+        }
+
+        header table a {
+            margin: 7px;
+        }
+
+        header p:first-of-type>a {
+            border: 1px solid yellow;
+            text-decoration: none;
+            color: black;
+        }
+
+        /* Navegación */
+        nav {
+            border: 1px solid green;
+            text-align: center;
+            word-spacing: 15px;
+            font-size: 14px;
+
+        }
+
+        nav>ul>li:first-of-type {
+            word-spacing: 1px;
+        }
+
+        nav ul>li {
+            border: 1px solid aquamarine;
+            text-transform: uppercase;
+            list-style-type: none;
+            display: inline;
+        }
+
+        nav ul>li>a {
+            text-decoration: none;
+            color: black;
+            font-weight: 600;
+            letter-spacing: 2px;
+            border: 1px solid gold;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        /* Banner venta privada */
+        article[aria-label="banner"] {
+            padding: 55px;
+            border: 5px solid blueviolet;
+            margin-top: 150px;
+            text-align: center;
+            background-color: gainsboro;
+        }
+
+        article {
+            margin: 12px;
+            text-align: center;
+        }
+
+        article p:first-of-type {
+            font-size: 13px;
+            letter-spacing: 2px;
+        }
+
+        article p:nth-of-type(2){
+            text-transform: capitalize;
+            font-size: 40px;
+        }
+
+        article p:nth-of-type(3){
+            font-size: 24px;
+        }
+
+        article p:nth-of-type(4){
+            font-size: 11px;
+            margin-bottom: 25px;
+        }
+
+        article p a:last-of-type{
+            text-decoration: none;
+            color: black;
+            font-size: 12px;
+            padding: 15px;
+            background-color: white;
+        }
+        /* Categorías */
+        h3 {
+            margin-top: 100px;
+            border: 1px solid salmon;
+            padding-left: 10%;
+            font-size: 16px;
+        }
+
+        /* Tabla imágenes */
+        main table {
+            border: 1px solid rgb(118, 0, 139);
+            border-spacing: 18px;
+            border-collapse: separate;
+            padding: 50px;
+            margin-right: 100px;
+            margin: auto;
+        }
+
+        table a {
+            border: 1px solid brown;
+            text-decoration: none;
+            color: black;
+        }
+
+        figure {
+            margin: 0;
+            padding: 0;
+        }
+
+        figcaption {
+            border: 1px solid yellowgreen;
+            padding-top: 10px;
+            text-align: left;
+        }
+
+        /* Lista final */
+        section:last-of-type>ul {
+            border: 2px solid orange;
+            list-style-type: none;
+            font-size: 12px;
+            letter-spacing: -1px;
+            text-align: center;
+            width: 100%;
+        }
+
+        section:last-of-type>ul>li {
+            display: inline-block;
+            text-align: left;
+            margin: 20px;
+            border: 1px solid lightgrey;
+            padding: 5px 50px;
+            width: 200px;
+        }
+
+        section:last-of-type a {
+            text-decoration: none;
+            color: black;
+        }
+
+        ul span {
+            color: green;
+        }
+
+        /* Enlace interno */
+        a:last-of-type {
+            text-align: right;
+        }
+    </style>
+
+</head>
+
+<body>
+    <!--Descarga app-->
+    <header>
+        <p>
+            <a href="https://www.elcorteingles.es/app/">
+                Descárgate aquí nuestra <strong>App</strong>.
+            </a>
+        </p>
+        <!--Imagen de menú desplegable + ancla-->
+        <section aria-label="menú">
+            <img src="imagenes/menu.png" alt="Menú" width="25">
+
+            <!--Logo principal: imagen con enlace externo-->
+            <a href="https://www.elcorteingles.es/">
+                <img src="imagenes/logo.jpg" alt="logo" width="150"></a>
+        </section>
+
+        <!--Buscador: formulario tipo get-->
+        <form action="#" method="get">
+            <input type="search" name="buscador" id="buscador" placeholder="¿Qué estás buscando?">
+            <input type="submit" value="">
+        </form>
+
+        <!--Iconos: imágenes con enlaces externos-->
+        <section aria-label="iconos">
+            <table>
+                <tr>
+                    <td><!--Usuario-->
+                        <a href="https://tinyurl.com/ysejkhfm">
+                            <img src="imagenes/usuario.png" alt="usuario" width="25">
+                        </a>
+                    </td>
+
+                    <td><!--Favoritos-->
+                        <a href="https://tinyurl.com/ysejkhfm">
+                            <img src="imagenes/corazon.png" alt="mis favoritos" width="25">
+                        </a>
+                    </td>
+
+                    <td><!--Cesta-->
+                        <a href="https://tinyurl.com/ysejkhfm">
+                            <img src="imagenes/cesta.png" alt="cesta" width="25">
+                        </a>
+                    </td>
+                </tr>
+            </table>
+        </section>
+        <!--Categorías principales: Texto con enlaces externos-->
+        <br>
+        <br><br>
+        <nav>
+            <ul>
+                <li><a href="https://www.elcorteingles.es/moda-mujer/">moda mujer</a></li>
+                <li><a href="https://www.elcorteingles.es/deportes/">deportes</a></li>
+                <li><a href="https://www.elcorteingles.es/electronica/">electrónica</a></li>
+                <li><a href="https://www.elcorteingles.es/hogar/">hogar</a></li>
+                <li><a href="https://tinyurl.com/9a6mzmvw">supermercado</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <br>
+    <br>
+    <!--Banner-->
+    <article aria-label="banner">
+        <p>
+            Del 12 al 16 de diciembre
+        </p>
+        <p>
+            venta privada
+        </p>
+        <p>
+            Hasta -30%
+        </p>
+        <p>
+            Solo para clientes con Tarjeta El Corte Inglés* en moda, deportes, electrodomésticos, electrónica, hogar y
+            más
+        </p>
+        <p>
+            <a href="https://www.elcorteingles.es/venta-privada/">
+                ¡Aprovecha la oportunidad!
+            </a>
+        </p>
+    </article>
+
+    <!--Categorías:tabla con imágenes a enlaces externos-->
+
+    <h3>Categorías</h3>
+
+    <main>
+        <section aria-label="categorias">
+            <table>
+                <tr>
+                    <!--Moda mujer-->
+                    <td>
+                        <article aria-label="moda mujer">
+                            <a href="https://www.elcorteingles.es/moda-mujer/">
+                                <figure>
+                                    <img src="imagenes/mujer.jpeg" alt="mujer" width="180">
+                                    <figcaption>Moda mujer</figcaption>
+                                </figure>
+                            </a>
+                        </article>
+                    </td>
+                    <!--Moda hombre-->
+                    <td>
+                        <article aria-label="moda hombre">
+                            <a href="https://www.elcorteingles.es/moda-hombre/">
+                                <figure>
+                                    <img src="imagenes/hombre.jpeg" alt="hombre" width="180">
+                                    <figcaption>Moda hombre</figcaption>
+                                </figure>
+                            </a>
+                        </article>
+                    </td>
+                    <!--Moda infantil-->
+                    <td>
+                        <article aria-label="moda infantil">
+                            <a href="https://www.elcorteingles.es/moda-infantil/">
+                                <figure>
+                                    <img src="imagenes/infantil.jpeg" alt="infantil" width="180">
+                                    <figcaption>Moda infantil</figcaption>
+                                </figure>
+                            </a>
+                        </article>
+                    </td>
+                    <!--Hogar-->
+                    <td>
+                        <article aria-label="hogar">
+                            <a href="https://www.elcorteingles.es/hogar/">
+                                <figure>
+                                    <img src="imagenes/hogar.jpeg" alt="hogar" width="180">
+                                    <figcaption>Hogar</figcaption>
+                                </figure>
+                            </a>
+                        </article>
+                    </td>
+                    <!--Deportes-->
+                    <td>
+                        <article aria-label="deportes">
+                            <a href="https://www.elcorteingles.es/deportes/">
+                                <figure>
+                                    <img src="imagenes/deportes.jpeg" alt="deportes" width="180">
+                                    <figcaption>Deportes</figcaption>
+                                </figure>
+                            </a>
+                        </article>
+                    </td>
+
+                    <!--Electrónica-->
+                    <td>
+                        <article aria-label="electronica">
+                            <a href="https://www.elcorteingles.es/electronica/">
+                                <figure>
+                                    <img src="imagenes/electronica.jpeg" alt="electronica" width="180">
+                                    <br>
+                                    <figcaption>Electrónica</figcaption>
+                                </figure>
+                            </a>
+                        </article>
+                    </td>
+                </tr>
+            </table>
+        </section>
+    </main>
+    <br><br><br><br>
+
+    <!--Lista desordenada-->
+    <section aria-label="lista desordenada">
+        <ul>
+            <li>
+                <img src="imagenes/tienda.png" alt="tienda" width="30">
+                <a href="https://www.elcorteingles.es/click-collect/">
+                    Recogida en tienda <span>gratis</span>
+                </a>
+            </li>
+
+            <li>
+                <img src="imagenes/envio.png" alt="envio" width="30">
+                <a href="https://www.elcorteingles.es/ayuda/es/envio-y-recogida/envio/gastos-de-envio/">
+                    Envío a domicilio
+                </a>
+            </li>
+
+            <li>
+                <img src="imagenes/devolucion.png" alt="devolucion" width="30">
+                <a href="https://www.elcorteingles.es/ayuda/es/devolucion-y-reembolso/devolucion-y-cambio/">
+                    Devolución <span>gratis</span> en tienda
+                </a>
+            </li>
+
+            <li>
+                <img src="imagenes/car.png" alt="car" width="30">
+                <a href="https://www.elcorteingles.es/click-car/">
+                    Click & Car
+                </a>
+            </li>
+        </ul>
+    </section>
+</body>
+
+</html>
