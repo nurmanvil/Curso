@@ -1,20 +1,41 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Animaciones</title>  
+    <title>Animaciones</title>
     <style>
-        p{
+        p {
             width: 40%;
             font-size: 14px;
             background-color: greenyellow;
             border-radius: 5px;
             color: red;
         }
+
+        p:hover {
+            transition-property: all;
+            transition-duration: 1s;
+            transition-delay: 1s;
+            transition-timing-function: ease-in;
+            width: 80%;
+            font-size: 20px;
+            background-color: blue;
+            border-radius: 10px;
+            color: white;
+        }
+
+        h1::selection {
+            background-color: yellow;
+        }
     </style>
 </head>
+
 <body>
-  <p>¡Este párrafo va a transformarse!</p>  
+    <h1>Título de la página</h1>
+    <p>¡Este párrafo va a transformarse!</p>
+
 </body>
+
 </html>
